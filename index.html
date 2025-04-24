@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Meses Contigo ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #f5f5f5, #e8e8e8);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 50px 30px;
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    h1 {
+      color: #e10600;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.7em;
+      margin: 20px 0;
+    }
+
+    .highlight {
+      color: #e10600;
+      font-weight: bold;
+    }
+
+    .car {
+      font-size: 48px;
+      animation: drive 6s linear infinite;
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    @keyframes drive {
+      0% { transform: translateX(-100vw); }
+      100% { transform: translateX(100vw); }
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-style: italic;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: #e10600;
+      animation: float 6s infinite ease-in-out;
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.4); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🏁 5 Meses en la Pole Contigo 🏁</h1>
+    <p>Hola mi cielo <3. </p>
+    <p>Hoy cumplimos <span class="highlight">5 meses</span> juntos y no quería dejar pasar este día sin recordarte lo mucho que te amo y lo feliz que me hace tenerte en mi vida.</p>
+    <p>Como en la <span class="highlight">Fórmula 1</span>, nuestro amor ha tenido vueltas rápidas, curvas difíciles y momentos de lluvia, pero siempre supimos mantenernos en pista, unidos, como el mejor equipo.</p>
+    <p>Tú y yo, contra el mundo, con el corazón como motor y el amor como gasolina. 🏎️💨</p>
+    <p>El sábado tengo algo especial para ti… algo que se que te va a gustar mucho mi niña, un regalo hecho de amor y detalles hechos con mi alma. Pero por ahora, solo quiero que sepas que <span class="highlight">te amo con toda mi alma y ser mi amorchito </span> y que esta carrera, contigo, es mi favorita.</p>
+    <div class="car">🏎️💨</div>
+    <div class="footer">Te amo más de lo que piesas mi niña hermosa, te idolatro, te adoro, te aprecio coshita mia, mi cagaitos de popo diarreico sjjsjs, TE AMOOOOOO MI NIÑA hermosa. ❤️</div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    // Corazones flotantes
+    const heartContainer = document.getElementById('hearts');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerText = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+      heart.style.fontSize = (16 + Math.random() * 24) + 'px';
+      heartContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
